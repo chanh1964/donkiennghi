@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+ul {
+  padding-left: 44px;
+  margin-bottom: 10px;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+ul li {
+  padding-bottom: 6px;
+}
+
+li p {
+  margin-bottom: 4px;
+}
+
+li.not-print {
+  color:#ededed;
+}
+
+li.not-print button {
+  color: black;
+  background-color: lightcyan;
+}
+li.not-print button:hover {
+  background-color: cyan
+}
+
+p, span, h1, li {
+  font-size: medium;
+}
+
+@media print {
+  @page {
+    size: A4; /* Options: auto, portrait, landscape, A4, legal, etc. */
+    margin: 2.54cm;
+  }
+
+  li.not-print {
+    display: none;
+  }
+}
