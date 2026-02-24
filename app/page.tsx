@@ -143,7 +143,7 @@ export default function Home() {
   return (
     <main
       className="bg-gray-200 flex flex-col justify-center items-center m-0 p-5 lg:p-16
-      print:w-fit print:py-0 print:block"
+      print:w-fit print:py-0 print:block print:bg-white"
     >
       <ToastContainer className="font-bold" />
       <p className="print:hidden bg-white p-2">
